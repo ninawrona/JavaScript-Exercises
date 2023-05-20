@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Authentication Example</title>
+        <script src="server.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <h1 class="form">Username: </h1><input type="text" id="username"></input>
+            <h1 class="form">Password: </h1><input type="text" id="password"></input>
+            
+            <button id="submit" onclick="login()">Login</button>
+            <button id="getData" onclick="getData()">Get Data</button>
+        </div>
+
+        <script>
+            async function login(){
+    const username = document.getElementById("username").value
+    const password = document.getElementById("password").value
+
+    const response = await fetch("http://localhost:3000/login", {
+        headers: { "Content-Type": "application/json" },
+        method: "POST",
+        body: JSON.stringify({ username, password }),
+    })
+
+    if (response.ok){
+        const authString = await response.headers.get("Authorization")
+        const token = authString?.split(" ")[1]
+        localStorage.setItem("jwt", token)
+        alert("Login successful!")
+    }else{
+        alert("Login failed")
+    }
+
+  }
+
+async function getData(){
+    const token = localStorage.getItem("jwt")
+    const response = await fetch("http://localhost:3000/protected", {
+        headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` },
+    })
+    if(response.ok){
+        const data = await response.json()
+        alert(JSON.stringify(data))
+    }else{
+        alert("Error retrieving data")
+    }
+
+}
+        </script>
+
+    </body>
+</html>
