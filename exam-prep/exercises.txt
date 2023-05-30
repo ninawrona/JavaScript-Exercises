@@ -1,0 +1,69 @@
+Answers:
+
+Exercise 1. 
+== equal to
+=== equal value and equal type
+
+Exercise 2
+
+It's NOT a higher order function.
+Higher order functions must TAKE IN (in an argument) or RETURN another function.
+
+console.log(rangeFrom3To(3))
+// → [3]
+
+console.log(rangeFrom3To(8))
+// → [3,4,5,6,7,8]
+
+console.log(rangeFrom7To(9))
+// → [7,8,9]
+
+Exercise 3
+Yes
+
+Exercise 4 
+It adds the nationality (a new property) to all existing objects of type Person.
+
+Execise 5
+First one returns an object.
+Second one returns undefined.
+
+Because in the second JavaScript automatically inserts a semicolon after return
+and does not read through the rest of the code. 
+The function will terminate right on the line of "return".
+
+Exercise 6
+
+undefined
+object
+
+Exercise 7
+
+It will display bulbasaur
+
+With The XMLHttpRequest you can:
+
+Update a web page without reloading the page
+Request data from a server - after the page has loaded
+Receive data from a server  - after the page has loaded
+Send data to a server - in the background
+
+SUPPORTS SYNCHRONOUS CALLS
+
+Exercise 8
+It will cause an error as in the function there is a Promise that NEEDS to be AWAITed in an ASYNC function.
+
+
+Exercise 9
+Yes -> only with var and functions
+no -> never with const and let
+
+Exercise 10
+undefined
+
+Exercise 11
+Second argument is optional
+
+Exercise 12
+250
+500
