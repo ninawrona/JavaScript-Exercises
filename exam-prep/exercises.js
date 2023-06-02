@@ -154,7 +154,7 @@ function Person(first, last, age, eyecolor) {
     }
 
 
-    //Exercise 12
+    //Exercise 12 - TYPESCRIPT
     let discount = function (price: number, rate: number = 0.50) {
         return price * rate;
         }

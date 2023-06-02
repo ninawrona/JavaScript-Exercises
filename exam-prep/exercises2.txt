@@ -135,3 +135,59 @@ cache['keyHere'] = 'valueHere'
 //Exercise 26
  
  Option 4 is incorrect
+
+//Exercise 27
+
+Option 2 is incorrect
+
+//Exercise 28
+
+NO - because in Typescript ALL ASYNC functions return Promises.
+This is the correct syntax:
+
+async function dramaticWelcome(): Promise<void> {
+    console.log("Hello")
+    for (let i = 0; i < 5; i++) {
+        const count: number = await delay(500, i)
+        console.log(count)
+    }
+    console.log("World!")
+}
+
+//Exercise 29 
+
+  "2 unread messages" will be printed out.
+  
+  && operator in React stands for "if" operation.
+
+//Exercise 30
+
+Option 1 is correct as in props (React arguments) functions must be passed, not called.
+
+//Exercise 31
+
+Module bundling is a build step before code reaches the browser.
+Achieved with build tools such as Webpack and ESBuild.
+Minifies modules and their dependencies and bundles them into a single file.
+
+//Exercise 32
+
+TRUE STATEMENTS
+React is used to make single page web applications.
+React uses Virtual DOM.
+JSX allows developers to write HTML-like code in their JavaScript files.
+JSX is a syntax extension for JavaScript.
+Babel is a JavaScript compiler that is mainly used to convert ECMAScript 2015+ 
+code into a backwards compatible version of JavaScript that can run 
+in current and older browsers or environments. 
+
+//Exercise 33
+Yes, it is valid.
+
+//Exercise 34
+Yes, it's valid, because the empty array tells React to run 
+useEffect ONLY on the first render.
+
+//Exercise 35
+It's incorrect runs useEffect on every render and those renders are triggered
+by the setCount() - state change.

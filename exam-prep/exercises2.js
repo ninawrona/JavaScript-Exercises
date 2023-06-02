@@ -266,3 +266,103 @@ interface Parameters {
 
       //Option 3
       type MyType = Omit<User, "id">;
+
+      //Exercise 28 - Typescript
+      //Is this Typescript syntax correct?
+
+      async function dramaticWelcome(): void {
+        console.log("Hello")
+        for (let i = 0; i < 5; i++) {
+            const count: number = await delay(500, i)
+            console.log(count)
+        }
+        console.log("World!")
+    }
+    
+    //Exercise 29 - React
+    //What will be printed out on this web page?
+
+    function App() {
+      return <Mailbox msgs={["Hi class!", "React is fun!"]} />
+    }
+  
+    function Mailbox({ msgs }) {
+        return <div>{msgs.length > 0 && <h1>{msgs.length} unread messages</h1>}</div>
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"))
+    root.render(<App />)
+  
+    //Exercise 30 - React
+    //Which option is correct?
+
+    //Option 1
+    function Button() {
+      function handleClick() {
+          alert("You clicked me!")
+      }
+  
+      return <button onClick={handleClick}>Click me</button>
+  }
+
+  //Option 2
+  function Button() {
+    function handleClick() {
+        alert("You clicked me!")
+    }
+
+    return <button onClick={handleClick()}>Click me</button>
+  }
+
+  //Exercise 31 - React
+  //What is Module bundling?
+
+  //Exercise 32 - React
+  //Which sentences are true?
+
+  React is used to make single page web applications.
+  React is used to make dynamic pages with added complexity and interactivity.
+  React uses Real DOM.
+  React uses Virtual DOM.
+  JSX allows developers to write HTML-like code in their JavaScript files.
+  Babel is a syntax extension for JavaScript.
+
+  //Exercise 33 - React
+  //Is this syntax correct? All imports are correct.
+
+  function Counter(){
+    const [count, setCount] = useState(0)
+
+    useEffect(() => {
+      console.log(count)
+    }, [count])
+
+    function adjustCount(amount){
+      return count + amount
+    }
+
+    return (
+      <>
+        <button onClick={() => adjustCount(1)}>Add 1</button>
+        <h3>{count}</h3>
+      </>
+    )
+  }
+
+  //Exercise 34 - React
+  //Is this syntax correct? All imports are correct.
+
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setCount((count) => count + 1);
+  }, []);
+
+  //Exercise 35 - React
+  //Is this syntax correct? All imports are correct.
+
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setCount(count + 1);
+  });
