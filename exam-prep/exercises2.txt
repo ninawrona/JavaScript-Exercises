@@ -1,0 +1,137 @@
+//Exercise 13
+
+app.use(logger)
+
+//Exercise 14
+
+Parsing the body request
+app.use(express.json())                             ----- handles json
+app.use(express.urlencoded({ extended: false }))    ----- handles forms
+
+//Exercise 15
+
+Option 3 - (status(401))
+
+//Exercise 16
+
+It means it's hashed 10 rounds.
+
+The second argument (10 in this case) is the cost factor that determines how many iterations of the algorithm is performed. 
+
+//Exercise 17
+Performance
+Accessibility
+SEO
+Best Practises
+
+(These are the only ones Lighthouse analyses)
+
+//Exercise 18
+
+Coverage
+
+--------THEORY--------
+JEST and React Testing Library CAN do:
+- Component Testing
+- Unit Testing
+
+JEST additionally can do:
+- logic testing
+- coverage
+
+RTL:
+- test DOM interactions
+- end-to-end testing
+- integration testing
+
+//Exercise 19
+
+This test checks if a component is rendering without issues.
+A smoke test is a type of software testing 
+that determines whether the deployed software build is stable or not.
+
+//Exercise 20
+
+Currently both of them are of type "any"
+
+We fix this by adding annotations:
+
+const addTwoNumbers = (a:number, b:number) => {
+    return a + b;
+};
+
+//Exercise 21
+
+Option 1 is incorrect.
+The rest is compilable in TypeScript.
+
+//Exercise 22
+
+Option 3 is incorrect.
+
+//Exercise 23 
+    // How do we ensure that makeUser ALWAYS returns a user?
+    
+    interface User {
+        id: number;
+        firstName: string;
+        lastName: string;
+      }  
+
+      const makeUser = (): User => {
+        return {
+            id: 1,
+            firstName: "Nina",
+            lastName: "Wrona"
+        };
+      };
+
+//Exercise 24
+
+No, Because this function returns a Promise.
+
+interface LukeSkywalker {
+  name: string;
+}
+
+export const fetchLukeSkywalker = async (): Promise<LukeSkywalker> => {
+  const data = await fetch('https://swapi.dev/api/people/1').then((res) => {
+    return res.json();
+  });
+
+  return data;
+};
+
+------Other valid solutions-------
+
+//option 2
+const fetchLukeSkywalker = async () => {
+  const data: LukeSkywalker = await fetch(
+    "https://swapi.dev/api/people/1"
+  ).then((res) => {
+    return res.json();
+  });
+
+  return data;
+};
+
+//option 3
+
+const fetchLukeSkywalker = async () => {
+  const data = await fetch("https://swapi.dev/api/people/1").then((res) => {
+    return res.json();
+  });
+
+  return data as LukeSkywalker;
+};
+
+//Exercise 25
+
+The Record type allows us to add any number of dynamic keys to the object at runtime, 
+using something like this:
+
+cache['keyHere'] = 'valueHere'
+
+//Exercise 26
+ 
+ Option 4 is incorrect
