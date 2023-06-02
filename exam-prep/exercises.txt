@@ -6,7 +6,7 @@ Exercise 1.
 
 Exercise 2
 
-It's NOT a higher order function.
+It IS a higher order function.
 Higher order functions must TAKE IN (in an argument) or RETURN another function.
 
 console.log(rangeFrom3To(3))
