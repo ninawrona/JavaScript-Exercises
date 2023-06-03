@@ -338,7 +338,7 @@ interface Parameters {
     }, [count])
 
     function adjustCount(amount){
-      return count + amount
+      return setCount(count + amount)
     }
 
     return (
